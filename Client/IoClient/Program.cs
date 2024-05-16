@@ -7,7 +7,7 @@ class Program
 {
     static async Task Main()
     {
-        var client = new SocketIOClient.SocketIO("http://localhost:3001"); ;
+        var client = new SocketIOClient.SocketIO("http://localhost:3001");
         client.OnConnected += async (sender, e) =>
         {
             Console.WriteLine("connected to server");
