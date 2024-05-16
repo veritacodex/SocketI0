@@ -6,9 +6,10 @@ const { Server } = require("socket.io");
 const io = new Server(server);
 
 app.use(express.static('public'));
+app.use(express.static('node_modules'));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/views/home.html');
 });
 
 io.on('connection', (socket) => {
